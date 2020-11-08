@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Car</title>
+        <style>
+            *{
+                padding:0;
+                margin:0;
+            }
+         .back
+           {
+               height: 100vh;
+               width: 100%;
+               background-image: url("https://tanmoyhaldar.github.io/tan/sky.jpg");
+               background-size: cover;
+               background-position: center;
+               position: relative;
+               overflow-x: hidden;
+           }
+        .highway
+          {
+              height:300px;
+              width:500%;
+              display: block;
+              background-image: url("https://tanmoyhaldar.github.io/tan/road.jpg");
+              position:absolute;
+              top:455px;
+              left:0;
+              right:0;
+              background-repeat: repeat-x;
+              animation-name: highway;
+              animation-duration: 4s;
+              animation-iteration-count: infinite;
+              animation-timing-function: linear;
+          }
+        @keyframes highway {
+            100%
+              {
+                  transform: translateX(-3400px);
+              }
+        }
+        .city
+           {
+               height:250px;
+               width: 500%;
+               background-image: url("https://tanmoyhaldar.github.io/tan/city.png");
+               position: absolute;
+               bottom:250px;
+               left: 0;
+               right:0;
+               display:block;
+               background-repeat: repeat-x;
+               animation-name: city;
+               animation-duration: 20s;
+               animation-timing-function: linear;
+               animation-iteration-count: infinite;
+               animation-direction: ;
+           }
+        @keyframes city {
+            100%
+              {
+                  transform: translateX(-3400px);
+              }
+        }
+        .car
+          {
+              width:400px;
+              left:50%;
+              bottom:100px;
+              transform: translateX(-50%);
+              position: absolute;
+          }
+        .car img
+          {
+              height:200px;
+              width:390px;
+              animation-name: car;
+              animation-duration: 400ms;
+              animation-timing-function: linear;
+              animation-iteration-count: infinite;
+          }
+        @keyframes car {
+            100%
+              {
+                  transform: translateY(2px);
+              }
+        }
+        .backwheel
+          {
+              height:75px;
+              width: 75px;
+              position: absolute;
+              bottom:120px;
+              left:590px;
+              animation-name: rotatewheel;
+              animation-duration: 400ms;
+              animation-timing-function: linear;
+              animation-iteration-count: infinite;
+          }
+        .frontwheel
+           {
+            height:75px;
+            width: 75px;
+            position: absolute;
+            bottom:120px;
+            left:830px;
+            animation-name: rotatewheel;
+            animation-duration: 400ms;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+           }
+        @keyframes rotatewheel {
+            100%
+              {
+                  transform: rotateZ(360deg);
+              }
+        }
+        </style>
+    </head>
+    <body>
+           <div class="back">
+                 <div class="highway">
+
+                 </div>
+                 <div class="city"></div>
+                 <div class="car">
+                     <img src="https://tanmoyhaldar.github.io/tan/car.png">
+                 </div>
+                 <div class="wheel">
+                    <img src="https://tanmoyhaldar.github.io/tan/wheel.png" class="frontwheel">
+                    <img src="https://tanmoyhaldar.github.io/tan/wheel.png" class="backwheel">
+                 </div>
+           </div>
+    </body>
+</html>
