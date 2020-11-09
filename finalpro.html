@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+              body{
+                  background-image: url("https://i.pinimg.com/originals/1e/63/da/1e63daf98c202670d3ce7cf190ef2115.jpg") ;
+                  background-size: cover;
+                  margin-left: 500px;
+                  margin-top: 100px;
+              }
+              #a{
+                  height: 80px;
+                  width: 130px;
+                  background-color: brown;
+                  font-size: 40px;
+                  font-weight: bold;
+                  font-family: fantasy;
+                  color: chartreuse;
+              }
+              #b{
+                  height: 80px;
+                  width: 130px;
+                  background-color: yellowgreen;
+                  font-size: 40px;
+                  font-weight: bold;
+                  font-family: fantasy;
+                  color: rgb(85, 5, 5);
+              }
+              #c{
+                  height: 80px;
+                  width: 130px;
+                  background-color:orangered;
+                  font-size: 40px;
+                  font-weight: bold;
+                  font-family: fantasy;
+                  color: black;
+              }
+              #d{
+                  height: 100px;
+                  width: 530px;
+                  text-align: right;
+                  font-size: 50px;
+                  background-color: blue;
+                  color: cyan;
+                  border-radius: 10px;
+                  font-family: corier new;
+              }
+              #a:hover , #b:hover , #c:hover{
+                  background-color: indigo;
+                  color: wheat;
+                  cursor: pointer;
+                  box-shadow: 3px 3px 3px black;
+                  opacity: 1;
+              }
+              #a,#b,#c,#d{
+                  opacity: 0.65;
+              }
+        </style>
+        <title>
+           CALCULATOR
+        </title>
+        <link rel="icon" href="https://www.bizland.biz/images/favicon/apple-icon.png" type="icon/png">
+    </head>
+    <body>
+        <form name="myform">
+            <input name="enterVal" type="text" id="d" placeholder="0">
+        </form>
+       <table>
+           <tr>
+               <td>
+                   <input type="button" value="9" id="a" onclick="enterData(9);">
+               </td>
+               <td>
+                <input type="button" value="8" id="a" onclick="enterData(8);">
+            </td>
+            <td>
+                <input type="button" value="7" id="a" onclick="enterData(7);">
+            </td>
+            <td>
+                <input type="button" value="+" id="b" onclick="enterData('+');">
+            </td>
+           </tr>
+           <tr>
+            <td>
+                <input type="button" value="6" id="a" onclick="enterData(6);">
+            </td>
+            <td>
+             <input type="button" value="5" id="a" onclick="enterData(5);">
+         </td>
+         <td>
+             <input type="button" value="4" id="a" onclick="enterData(4);">
+         </td>
+         <td>
+             <input type="button" value="-" id="b" onclick="enterData('-');">
+         </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="3" id="a" onclick="enterData(3);">
+            </td>
+            <td>
+             <input type="button" value="2" id="a" onclick="enterData(2);">
+         </td>
+         <td>
+             <input type="button" value="1" id="a" onclick="enterData(1);">
+         </td>
+         <td>
+             <input type="button" value="x" id="b" onclick="enterData('*');">
+         </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="C" id="c" onclick="clearData();">
+            </td>
+            <td>
+             <input type="button" value="=" id="c" onclick="solveEquation();">
+         </td>
+         <td>
+             <input type="button" value="0" id="a" onclick="enterData(0);">
+         </td>
+         <td>
+             <input type="button" value="/" id="b" onclick="enterData('/');">
+         </td>
+        </tr>
+       </table>
+
+       <script>
+           function enterData(abc)
+               {
+                    document.myform.enterVal.value =document.myform.enterVal.value+abc;
+               }
+            function clearData()
+               {
+                document.myform.enterVal.value = "";
+               }
+            function solveEquation()
+               {
+                   var x = document.myform.enterVal.value;
+                   document.myform.enterVal.value = eval(x);
+               }
+       </script>
+    </body>
+</html>
