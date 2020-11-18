@@ -151,10 +151,38 @@ h1{
     bottom: 5%;
     right: 5%;
 }
+.ball{
+  height: 50px;
+  width: 50px;
+  background-color: red;
+  position: absolute;
+  top: 5%;
+  left: 10%;
+  animation-name: ball;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+@keyframes ball {
+  0%{
+    border-radius: 0%;
+    background-color: red;
+  }
+  50%{
+    border-radius: 50%;
+    background-color: white;
+  }
+  100%{
+    border-radius: 0%;
+    background-color: red;
+  }
+}
     </style>
     
 </head>
 <body>
+    <div class="ball"></div>
     <div class="clock">
         <div class="hand hour" data-hour-hand></div>
         <div class="hand minute" data-minute-hand></div>
