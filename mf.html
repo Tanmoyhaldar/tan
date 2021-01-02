@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         #mf_1, #mf_2, #mf_3, #mf{
+            background-color: black;
+            border: none;
+        }
+        .a{
+            border: 2px solid grey;
+            padding: 30px;
+        }
+        .b{
+            border: 2px solid grey;
+            padding: 30px;
+        }
+        .c{
+            border: 2px solid grey;
+            padding: 30px;
+        }
+        .d{
+            background-color: black;
+            padding: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="a">
+        <p><b><i><u>ICICI Prudential Sensex Index Fund Direct Growth</u></i></b></p>
+        <input type="number" id="mf1_1" placeholder="Current Value">
+        <input type="number" id="mf1_2" placeholder="Day Change Percentage">
+    </div> <br><br>
+    <div class="b">
+        <p><b><i><u>ICICI Prudential Long Term Equity Fund(Tax Saving) Direct Plan Growth</u></i></b></p>
+        <input type="number" id="mf2_1" placeholder="Current Value">
+        <input type="number" id="mf2_2" placeholder="Day Change Percentage">
+    </div> <br><br>
+    <div class="c">
+        <p><b><i><u>SBI Banking & Financial Services Fund Direct Growth</u></i></b></p>
+        <input type="number" id="mf3_1" placeholder="Current Value">
+        <input type="number" id="mf3_2" placeholder="Day Change Percentage"> <br><br>
+    </div> <br><br>
+    <button onclick="calcFinalValue() ; makeVisible()">
+        Calculate
+    </button> <br>
+    <br>
+    <hr>
+    <div class="d">
+        <p>Overall Output</p>
+        <input type="text" id="mf_1" placeholder="ICICI-1">
+        <input type="text" id="mf_2" placeholder="ICICI-2">
+        <input type="text" id="mf_3" placeholder="SBI"> <br> <br>
+        <input type="text" id="mf" placeholder="TOTAL">
+    </div>
+    
+    <!-- 
+        1. Ask for number of MFs
+        2. For each MF
+          a. Current Value 
+          b. Day change %age
+          c. Will show the total profit for that day and final value
+     -->
+      <script>
+          function calcFinalValue(){
+              var MF1_1 = document.getElementById("mf1_1").value;
+              var MF1_2 = document.getElementById("mf1_2").value;
+              var MF2_1 = document.getElementById("mf2_1").value;
+              var MF2_2 = document.getElementById("mf2_2").value;
+              var MF3_1 = document.getElementById("mf3_1").value;
+              var MF3_2 = document.getElementById("mf3_2").value;
+              var MF1 = MF1_1*MF1_2/100;
+              var MF2 = MF2_1*MF2_2/100;
+              var MF3 = MF3_1*MF3_2/100;
+              var total_MF = MF1 + MF2 + MF3;
+              document.getElementById("mf_1").value = "ICICI Sensex-"+MF1;
+              document.getElementById("mf_2").value = "ICICI Tax Saving-"+MF2;
+              document.getElementById("mf_3").value = "SBI-"+MF3;
+              document.getElementById("mf").value = "Total-"+total_MF.toFixed();
+          }
+          function makeVisible(){
+              document.getElementById("mf_1").style.background = "burlywood";
+              document.getElementById("mf_2").style.background = "burlywood";
+              document.getElementById("mf_3").style.background = "burlywood";
+              document.getElementById("mf").style.background = "burlywood";
+          }
+      </script>  
+ 
+</body>
+</html>
